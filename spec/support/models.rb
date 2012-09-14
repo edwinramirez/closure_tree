@@ -60,3 +60,8 @@ end
 class CuisineType < ActiveRecord::Base
   acts_as_tree
 end
+
+class Animal < ActiveRecord::Base
+  attr_accessible :name # < - make sure order doesn't matter
+  acts_as_tree :order => "sort_order"
+end

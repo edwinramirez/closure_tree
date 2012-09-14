@@ -69,4 +69,20 @@ ActiveRecord::Schema.define(:version => 0) do
     t.integer "descendant_id", :null => false
     t.integer "generations",   :null => false
   end
+
+  create_table "animals", :force => true do |t|
+    t.string   "name"
+    t.string   "type"
+    t.integer  "sort_order"
+    t.integer  "parent_id"
+  end
+
+  create_table "animal_hierarchies", :id => false, :force => true do |t|
+    t.integer "ancestor_id",   :null => false
+    t.integer "descendant_id", :null => false
+    t.integer "generations",   :null => false
+  end
+
+  add_index :animal_hierarchies, [:ancestor_id, :descendant_id], :unique => true
+  add_index :animal_hierarchies, [:descendant_id]
 end

@@ -1,0 +1,23 @@
+cage:
+  name: a1
+  sort_order: 1
+
+animal1:
+  name: mr-panda
+  parent: a1
+  sort_order: 0
+
+animal2:
+  name: mr-snake
+  parent: a1
+  sort_order: 1
+
+animal3:
+  name: mrs-snake
+  parent: a1
+  sort_order: 2
+
+animal4:
+  name: mr-tiger
+  parent: a1
+  sort_order: 3
