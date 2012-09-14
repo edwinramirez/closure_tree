@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'ruby-debug'
+require 'debugger'
 
 def nuke_db
   AnimalHierarchy.delete_all
